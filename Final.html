@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    h1, h2, h3 {
+      text-align: center;
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .summary {
+      margin-top: 20px;
+    }
+    .left-align {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+    }
+    .list-group {
+      display: none; /* Hide the list group by default */
+    }
+    .list-group.show {
+      display: block; /* Show the list group when 'show' class is added */
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const summaryButton = document.getElementById('summaryButton');
+      const summaryContent = document.getElementById('collapseExample');
+
+      summaryButton.addEventListener('click', function() {
+        summaryContent.classList.toggle('show');
+      });
+
+      const toggleButton = document.getElementById('toggleButton');
+      const listGroup = document.querySelector('.list-group');
+
+      toggleButton.addEventListener('click', function() {
+        listGroup.classList.toggle('show'); // Toggle the 'show' class on list group
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container mt-5">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h1>SHARDUL CHAVAN</h1>
+      <h2>· (+91) 7414911925 · shardulc1510@gmail.com · Pune, India · LinkedIn · GitHub </h2>
+      <hr />
+    </div>
+
+    <!-- Toggle Button for Summary -->
+    <div class="left-align">
+      <button id="summaryButton" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Summary
+      </button>
+    </div>
+
+    <!-- Summary Content -->
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body summary">
+        Ambitious and self-motivated undergraduate student pursuing a bachelor’s degree in Computer Science. 
+        Deeply interested in exploring the ever-evolving field of software technology coupled with a strong drive for 
+        innovation and problem-solving. Eager to apply my knowledge in test documentation, quality assurance 
+        practices, and contributing to efficient software development processes.
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="left-align">
+      <button id="toggleButton" class="btn btn-primary" type="button">
+        Education
+      </button>
+    </div>
+    <div class="list-group list-group-numbered mt-3">
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">B. Tech Computer Science</div>
+          MIT World Peace University, Pune
+        </div>
+        <span class="badge bg-primary rounded-pill">08/2023 - Present</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Diploma in Computer Engineering</div>
+          Government Polytechnic Pune
+        </div>
+        <span class="badge bg-primary rounded-pill">09/2020 – 05/2023</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">High School (SSC)</div>
+          Amrita Vidyalayam Nigdi, Pune
+        </div>
+        <span class="badge bg-primary rounded-pill">06/2008 – 04/2020</span>
+      </li>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="mt-5">
+      <h3>Experience</h3>
+      <hr />
+      <ul>
+        <li>Mindlabz Software Solution, Pune
+          Proficient in Java and advanced Java concepts, including OOP, data structures, and algorithms. 
+          Contributed to the design and development of an inventory management system, utilizing JDBC and Servlets. 
+          Enhanced software development, project management, and problem-solving skills through troubleshooting 
+          technical challenges.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="contact-info">
+      <h3>Projects</h3>
+      <hr />
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="C:\Users\samik\Downloads\face recognition.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Facial Recognition Attendance System (Python)</h5>
+            <p>Designed to streamline attendance using facial recognition technology, this system utilizes OpenCV for realtime face detection and recognition, ensuring accurate and efficient tracking. It features a web interface for capturing and recording attendance, offering a user-friendly experience for administrators and users.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="C:\Users\samik\Downloads\image-inventry.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Inventory Management System (Java)</h5>
+            <p>The Inventory Management System is a Java application designed to streamline inventory tracking and management. Using JDBC, it interacts with a database to add, update, and delete items. The user-friendly interface, developed with NetBeans IDE, ensures efficient operation.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="C:\Users\samik\Downloads\Hackathon.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Video Analytics Hackathon 2024</h5>
+            <p>Proposed a system to analyse footfall at ticket counters, predict peak times, and open additional counters as needed. Alerts activate extra counters when thresholds are exceeded, and visitors are directed to waiting areas if capacity is surpassed. This ensures efficient crowd management and reduces congestion.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="mt-5">
+      <h3>Skills</h3>
+      <hr />
+      <ul>
+        <li>Collaborative working</li>
+        <li>Communication Skills</li>
+        <li>C/C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>HTML/CSS</li>
+      </ul>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="mt-5">
+      <h3>Languages</h3>
+      <hr />
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              English
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Full Professional Proficiency.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Marathi
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Native or Bilingual Proficiency.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Hindi
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Native or Bilingual Proficiency.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Japanese
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Elementary Proficiency.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Areas of Interest Section -->
+    <div class="mt-5">
+      <h3>Areas of Interest</h3>
+      <hr />
+      <ul>
+        <li>Software Testing</li>
+        <li>Working on Real Time-Based Projects</li>
+        <li>Artificial Intelligence</li>
+        <li>Blockchain</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
